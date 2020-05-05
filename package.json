@@ -1,0 +1,24 @@
+{
+  "name": "l.tilelayer.canvas",
+  "version": "1.0.0",
+  "description": "Render Leaflet's tiles as canvas elements.",
+  "main": "index.js",
+  "scripts": {
+    "terser": "terser --compress --mangle --output index.min.js -- index.js"
+  },
+  "keywords": [
+    "leaflet",
+    "tile",
+    "layer",
+    "plugin",
+    "canvas",
+    "performance",
+    "gpu",
+    "consumption"
+  ],
+  "author": "GIAP",
+  "license": "MIT",
+  "devDependencies": {
+    "terser": "^4.6.13"
+  }
+}
