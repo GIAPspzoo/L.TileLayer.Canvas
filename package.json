@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Render Leaflet's tiles as canvas elements.",
   "files": ["index.min.js"],
-  "main": "index.js",
+  "main": "index.min.js",
   "scripts": {
     "prepublishOnly": "terser --compress --mangle --output index.min.js -- index.js"
   },
