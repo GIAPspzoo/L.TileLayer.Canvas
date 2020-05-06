@@ -8,7 +8,20 @@ If your project has a lot of layers, sometimes performance issues related to GPU
 </p>
 
 ## How to use it?
-It's very simple - include `L.TileLayer.Canvas`'s .js file and on your map use `L.tileLayer.canvas` instead of `L.tileLayer`. That's it!
+You can install it via package manager:
+```
+npm install tilelayer-canvas
+```
+or
+```
+yarn add tilelayer-canvas
+```
+or just copy `index.min.js` from this repository and include it by `<script>` tag:
+```js
+<script src="./path/to/index.min.js"></script>
+```
+
+Then in your project use `L.tileLayer.canvas` instead of `L.tileLayer`. That's it! [See an example](./example/index.html).
 
 ## License
 MIT

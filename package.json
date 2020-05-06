@@ -1,5 +1,5 @@
 {
-  "name": "TileLayer.Canvas",
+  "name": "tilelayer-canvas",
   "version": "1.0.0",
   "description": "Render Leaflet's tiles as canvas elements.",
   "files": ["index.min.js"],
