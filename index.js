@@ -13,6 +13,7 @@ L.TileLayer.Canvas = L.TileLayer.extend({
     img.onload = () => {
       try {
         ctx.drawImage(img, 0, 0);
+        tile.complete = true;
       } catch (e) {
         err = e;
       } finally {
