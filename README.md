@@ -24,10 +24,10 @@ or just copy `index.min.js` from this repository and include it by `<script>` ta
 Then in your project use `L.tileLayer.canvas` instead of `L.tileLayer`. That's it! [See an example](./example/index.html).
 
 ## Changelog
-09/06/2020 - 1.0.2
+**1.0.2** - 09/06/2020
 * Added `complete` attribute to `<canvas>` element (fixed blinked zoom issue).
 
-06/09/2020 - 1.0.1
+**1.0.1** - 06/09/2020
 * Fixed npm package name.
 
 ## License
