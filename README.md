@@ -27,7 +27,7 @@ Then in your project use `L.tileLayer.canvas` instead of `L.tileLayer`. That's i
 **1.0.2** - 09/06/2020
 * Added `complete` attribute to `<canvas>` element (fixed blinked zoom issue).
 
-**1.0.1** - 06/09/2020
+**1.0.1** - 06/05/2020
 * Fixed npm package name.
 
 ## License
