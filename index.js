@@ -1,9 +1,7 @@
 L.TileLayer.Canvas = L.TileLayer.extend({
-  createTile: function(coords, done) {
+  createCanvas: function (tile, coords, done) {
     let err;
-
-    const tile = document.createElement('canvas');
-    const ctx = tile.getContext('2d');
+    const ctx = tile.getContext("2d");
 
     const { x: width, y: height } = this.getTileSize();
     tile.width = width;
@@ -21,10 +19,22 @@ L.TileLayer.Canvas = L.TileLayer.extend({
       }
     };
     img.src = this.getTileUrl(coords);
-    img.crossOrigin = 'anonymous';
+    img.crossOrigin = "anonymous";
+  },
+  createTile: function (coords, done) {
+    const { timeout, delay } = this.options;
+    const tile = document.createElement("canvas");
+
+    if (timeout) {
+      setTimeout(() => {
+        this.createCanvas(tile, coords, done);
+      }, delay || 1000);
+    } else {
+      this.createCanvas(tile, coords, done);
+    }
 
     return tile;
-  }
+  },
 });
 
 L.tileLayer.canvas = function tileLayerCanvas(url, options) {
