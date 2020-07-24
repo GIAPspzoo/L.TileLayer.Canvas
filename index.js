@@ -22,13 +22,13 @@ L.TileLayer.Canvas = L.TileLayer.extend({
     img.crossOrigin = "anonymous";
   },
   createTile: function (coords, done) {
-    const { timeout, delay } = this.options;
+    const { timeout } = this.options;
     const tile = document.createElement("canvas");
 
     if (timeout) {
       setTimeout(() => {
         this.createCanvas(tile, coords, done);
-      }, delay || 1000);
+      }, timeout);
     } else {
       this.createCanvas(tile, coords, done);
     }

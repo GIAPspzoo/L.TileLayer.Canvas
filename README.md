@@ -28,8 +28,7 @@ Then in your project use `L.tileLayer.canvas` instead of `L.tileLayer`. That's i
 * Added canvas charging delay support
 * Added options
 ```
-delay: Boolean - enable timeout, default: false
-timeout: Number - delay setting, default: 1000 (ms)
+timeout: Number - delay time (ms)
 ```
 
 **1.0.2** - 09/06/2020
