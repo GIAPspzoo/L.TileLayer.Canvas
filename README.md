@@ -24,6 +24,9 @@ or just copy `index.min.js` from this repository and include it by `<script>` ta
 Then in your project use `L.tileLayer.canvas` instead of `L.tileLayer`. That's it! [See an example](./example/index.html).
 
 ## Changelog
+**1.1.1** - 27/07/2020
+* Added `clearTimeout`
+
 **1.1.0** - 24/07/2020
 * Added canvas charging delay support
 * Added options
