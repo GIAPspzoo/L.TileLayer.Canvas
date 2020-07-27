@@ -1,4 +1,5 @@
 L.TileLayer.Canvas = L.TileLayer.extend({
+  delay: null,
   createCanvas: function (tile, coords, done) {
     let err;
     const ctx = tile.getContext("2d");
@@ -26,7 +27,9 @@ L.TileLayer.Canvas = L.TileLayer.extend({
     const tile = document.createElement("canvas");
 
     if (timeout) {
-      setTimeout(() => {
+      if (this.delay) clearTimeout(this.delay);
+
+      this.delay = setTimeout(() => {
         this.createCanvas(tile, coords, done);
       }, timeout);
     } else {
