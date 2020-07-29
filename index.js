@@ -1,5 +1,6 @@
 L.TileLayer.Canvas = L.TileLayer.extend({
-  _delay: null,
+  _delays: {},
+  _delaysForZoom: null,
   createCanvas: function (tile, coords, done) {
     let err;
     const ctx = tile.getContext("2d");
@@ -24,19 +25,38 @@ L.TileLayer.Canvas = L.TileLayer.extend({
   },
   createTile: function (coords, done) {
     const { timeout } = this.options;
+    const { z: zoom } = coords;
     const tile = document.createElement("canvas");
 
     if (timeout) {
-      if (this._delay) clearTimeout(this._delay);
+      if (zoom !== this._delaysForZoom) {
+        this._clearDelaysForZoom();
+        this._delaysForZoom = zoom;
+      }
 
-      this._delay = setTimeout(() => {
+      if (!this._delays[zoom]) this._delays[zoom] = [];
+
+      this._delays[zoom].push(setTimeout(() => {
         this.createCanvas(tile, coords, done);
-      }, timeout);
+      }, timeout));
     } else {
       this.createCanvas(tile, coords, done);
     }
 
     return tile;
+  },
+  _clearDelaysForZoom: function() {
+    const prevZoom = this._delaysForZoom;
+    const delays = this._delays[prevZoom];
+
+    if (!delays) return;
+
+    delays.forEach((delay, index) => {
+      clearTimeout(delay);
+      delete delays[index];
+    });
+
+    delete this._delays[prevZoom];
   },
 });
 

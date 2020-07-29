@@ -23,13 +23,22 @@ or just copy `index.min.js` from this repository and include it by `<script>` ta
 
 Then in your project use `L.tileLayer.canvas` instead of `L.tileLayer`. That's it! [See an example](./example/index.html).
 
+## Options
+Name | Required | Default value | Description
+---- | -------- | ------------- | -----------
+`timeout` | false | `undefined` | Zoom debounce time.
+
 ## Changelog
+**1.1.2** - 29/07/2020
+* Cancelation of unfinished delays after zoom change.
+* Added Babel to transform code to support older browsers.
+
 **1.1.1** - 27/07/2020
-* Added `clearTimeout`
+* Added `clearTimeout` for delays.
 
 **1.1.0** - 24/07/2020
-* Added canvas charging delay support
-* Added options
+* Added canvas charging delay support.
+* Added options:
 ```
 timeout: Number - delay time (ms)
 ```
