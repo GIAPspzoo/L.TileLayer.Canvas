@@ -30,7 +30,8 @@ Name | Required | Default value | Description
 
 ## Changelog
 **1.1.2** - 29/07/2020
-* Cancel unfinished delays after zoom change.
+* Cancelation of unfinished delays after zoom change.
+* Added Babel to transform code to support older browsers.
 
 **1.1.1** - 27/07/2020
 * Added `clearTimeout` for delays.
