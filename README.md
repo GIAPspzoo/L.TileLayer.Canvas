@@ -26,7 +26,7 @@ Then in your project use `L.tileLayer.canvas` instead of `L.tileLayer`. That's i
 ## Options
 Name | Required | Default value | Description
 ---- | -------- | ------------- | -----------
-`timeout` | false | `undefined` | Zoom debounce time.
+`timeout` | No | `undefined` | Zoom debounce time.
 
 ## Changelog
 **1.1.2** - 29/07/2020
