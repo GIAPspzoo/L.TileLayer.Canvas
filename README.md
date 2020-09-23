@@ -29,6 +29,9 @@ Name | Required | Default value | Description
 `timeout` | No | `undefined` | Zoom debounce time.
 
 ## Changelog
+**1.1.3** - 23/09/2020
+* Fixed sending tile requests with `NaN` zoom value for layers with delay defined.
+
 **1.1.2** - 29/07/2020
 * Cancelation of unfinished delays after zoom change.
 * Added Babel to transform code to support older browsers.

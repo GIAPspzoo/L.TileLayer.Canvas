@@ -1,8 +1,10 @@
 {
   "name": "tilelayer-canvas",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Render Leaflet's tiles as canvas elements.",
-  "files": ["index.min.js"],
+  "files": [
+    "index.min.js"
+  ],
   "main": "index.min.js",
   "scripts": {
     "prepublishOnly": "npx babel index.js -o index.min.js && terser --compress --mangle --output index.min.js -- index.min.js"

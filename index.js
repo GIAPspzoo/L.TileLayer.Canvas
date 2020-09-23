@@ -20,7 +20,8 @@ L.TileLayer.Canvas = L.TileLayer.extend({
         done(err, tile);
       }
     };
-    img.src = this.getTileUrl(coords);
+    const tileZoom = this._getZoomForUrl();
+    img.src = isNaN(tileZoom) ? '' : this.getTileUrl(coords);
     img.crossOrigin = "anonymous";
   },
   createTile: function (coords, done) {
