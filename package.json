@@ -15,6 +15,9 @@
     "@babel/preset-env": "^7.10.4",
     "terser": "^4.6.13"
   },
+  "peerDependencies": {
+    "leaflet": "^1.6.0"
+  },
   "keywords": [
     "leaflet",
     "tile",
