@@ -4,10 +4,11 @@ L.TileLayer.Canvas = L.TileLayer.extend({
   createCanvas: function (tile, coords, done) {
     let err;
     const ctx = tile.getContext("2d");
+    const { doubleSize } = this.options;
 
     const { x: width, y: height } = this.getTileSize();
-    tile.width = width;
-    tile.height = height;
+    tile.width = doubleSize ? width * 2 : width;
+    tile.height = doubleSize ? height * 2 : height;
 
     const img = new Image();
     img.onload = () => {
