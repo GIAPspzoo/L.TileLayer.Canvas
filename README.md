@@ -30,6 +30,9 @@ Name | Required | Default value | Description
 `doubleSize` | No | `undefined` | Set to true if tiles are 2x.
 
 ## Changelog
+**1.1.4** - 06/03/2024
+* Fixed aborting of loading tiles.
+
 **1.1.3** - 23/09/2020
 * Fixed sending tile requests with `NaN` zoom value for layers with delay defined.
 
