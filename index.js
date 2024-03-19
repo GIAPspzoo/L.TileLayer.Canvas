@@ -11,6 +11,7 @@ L.TileLayer.Canvas = L.TileLayer.extend({
     tile.height = doubleSize ? height * 2 : height;
 
     const img = new Image();
+    img.onerror = this._tileOnError.bind(this, done, img);
     img.onload = () => {
       try {
         ctx.drawImage(img, 0, 0);
@@ -21,8 +22,7 @@ L.TileLayer.Canvas = L.TileLayer.extend({
         done(err, tile);
       }
     };
-    // We use img and not tile to be more consistent with tilelayer that sends an img element
-    img.onerror = this._tileOnError.bind(this, done, img);
+
     const tileZoom = this._getZoomForUrl();
     img.src = isNaN(tileZoom) ? '' : this.getTileUrl(coords);
     img.crossOrigin = 'anonymous';

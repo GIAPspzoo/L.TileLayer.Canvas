@@ -30,8 +30,11 @@ Name | Required | Default value | Description
 `doubleSize` | No | `undefined` | Set to true if tiles are 2x.
 
 ## Changelog
+**1.1.5** - 19/03/2024
+* Run `_tileOnError` if tile load fails. ([@HandyMenny](https://github.com/HandyMenny) in [#14](https://github.com/GIAPspzoo/L.TileLayer.Canvas/pull/14))
+
 **1.1.4** - 06/03/2024
-* Fixed aborting of loading tiles.
+* Fixed aborting of loading tiles. ([@kradziko](https://github.com/kradziko) in [#14](https://github.com/GIAPspzoo/L.TileLayer.Canvas/pull/13))
 
 **1.1.3** - 23/09/2020
 * Fixed sending tile requests with `NaN` zoom value for layers with delay defined.
