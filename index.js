@@ -21,6 +21,8 @@ L.TileLayer.Canvas = L.TileLayer.extend({
         done(err, tile);
       }
     };
+    // We use img and not tile to be more consistent with tilelayer that sends an img element
+    img.onerror = this._tileOnError.bind(this, done, img);
     const tileZoom = this._getZoomForUrl();
     img.src = isNaN(tileZoom) ? '' : this.getTileUrl(coords);
     img.crossOrigin = 'anonymous';
