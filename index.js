@@ -97,5 +97,10 @@ L.TileLayer.Canvas = L.TileLayer.extend({
 });
 
 L.tileLayer.canvas = function tileLayerCanvas(url, options) {
+  options = options || {};
+  if (typeof options.doubleSize == 'undefined') {
+    options.doubleSize = L.Browser.retina;
+  }
+
   return new L.TileLayer.Canvas(url, options);
 };

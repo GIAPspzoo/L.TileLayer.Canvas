@@ -24,10 +24,10 @@ or just copy `index.min.js` from this repository and include it using a `<script
 Then in your project use `L.tileLayer.canvas` instead of `L.tileLayer`. That's it! [See an example](./example/index.html).
 
 ## Options
-Name | Required | Default value | Description
----- | -------- | ------------- | -----------
-`timeout` | No | `undefined` | Zoom debounce time.
-`doubleSize` | No | `undefined` | Set to true if tiles are 2x.
+| Name         | Required | Default value                                                             | Description                  |
+|--------------|----------|---------------------------------------------------------------------------|------------------------------|
+| `timeout`    | No       | `undefined`                                                               | Zoom debounce time.          |
+| `doubleSize` | No       | [`L.Browser.retina`](https://leafletjs.com/reference.html#browser-retina) | Set to true if tiles are 2x. |
 
 ## Changelog
 Check the [CHANGELOG.md](CHANGELOG.md) file.

@@ -10,10 +10,10 @@
     "prepublishOnly": "npx babel index.js -o index.min.js && terser --compress --mangle --output index.min.js -- index.min.js"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
+    "@babel/cli": "^7.28.3",
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
-    "terser": "^4.6.13"
+    "terser": "^4.8.1"
   },
   "keywords": [
     "leaflet",
